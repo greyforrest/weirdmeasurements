@@ -1,5 +1,6 @@
 import './App.css';
 import {useState} from "react";
+import './index.css';
 
 function App() {
     const [category, setCategory] = useState();
@@ -59,7 +60,7 @@ function App() {
         <div className="App">
             <form>
                 <label htmlFor="category">Choose the category:</label>
-                <select name="category" id="category" value={category} onChange={handleChangeCategory}>
+                <select name="category" id="category" value={category} onChange={handleChangeCategory} className="selectpicker" data-style="btn-info">
                     <option value="length">length</option>
                     <option value="duration">duration</option>
                     <option value="area">area</option>
