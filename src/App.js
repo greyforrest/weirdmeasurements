@@ -1,4 +1,5 @@
 import './App.css';
+import './output';
 import {useState} from "react";
 import './index.css';
 
@@ -6,6 +7,7 @@ function App() {
     const [category, setCategory] = useState();
     const [unit, setUnit] = useState();
     const [inputNumber, setInputNumber] = useState();
+    const [showOutput, setShowOutput] = useState(false);
     var optionsForUnitSelect = getCorrectUnitList();
 
     function getCorrectUnitList() {
@@ -58,11 +60,11 @@ function App() {
     }
 
     function handleChangeInputNumber(event){
-        setInputNumber()(event.target.value);
+        setInputNumber(event.target.value);
     }
 
     function outputMeasurements(){
-
+        setShowOutput(true);
     }
 
     return (
@@ -90,6 +92,7 @@ function App() {
                     <button onClick={outputMeasurements}>Show me weird measurements!</button>
                 </div>
             </form>
+            {showOutput ? <output unit={unit} category={category} number={inputNumber} /> : null}
         </div>
     )
 }
