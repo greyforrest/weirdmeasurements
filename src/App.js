@@ -55,7 +55,7 @@ function App() {
         setCategory(event.target.value);
     }
 
-    function handleChangeMeasurement(event) {
+    function handleChangeUnit(event) {
         setUnit(event.target.value);
     }
 
@@ -74,16 +74,16 @@ function App() {
                     <label htmlFor="category">Choose the category:</label>
                     <select name="category" id="category" value={category} onChange={handleChangeCategory}
                             className="selectpicker" data-style="btn-info">
-                        <option value="length">length</option>
-                        <option value="duration">duration</option>
-                        <option value="area">area</option>
-                        <option value="weight">weight</option>
+                        <option key="1" value="length">length</option>
+                        <option key="2" value="duration">duration</option>
+                        <option key="3" value="area">area</option>
+                        <option key="4" value="weight">weight</option>
                     </select>
                 </div>
                 <div className="row ml-4">
                     <label htmlFor="unit">Select unit according to category:</label>
-                    <select name="unit" id="unit" value={unit} onChange={handleChangeMeasurement}>
-                        {optionsForUnitSelect.map(({value, label}, index) => <option value={value}>{label}</option>)}
+                    <select name="unit" id="unit" value={unit} onChange={handleChangeUnit}>
+                        {optionsForUnitSelect.map(({value, label}, index) => <option key={index} value={value}>{label}</option>)}
                     </select>
                 </div>
                 <div className="row ml-4">
