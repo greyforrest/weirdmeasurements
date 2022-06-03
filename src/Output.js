@@ -2,7 +2,7 @@ import './output.css';
 import {useState} from "react";
 import './index.css';
 
-function output(props){
+function Output(props){
     const category = props.category;
     const unit = props.unit;
     const number = props.number;
@@ -54,9 +54,9 @@ function output(props){
         return mapForCalculation;
     }
 
-    return{
+    return(
         <div>
             {differentMeasurements.map(({value, label}, index) => <div className="row"><p>{value * numberForCalc} {label}</p></div>)}
         </div>
-    }
+    )
 }

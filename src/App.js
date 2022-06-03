@@ -92,7 +92,7 @@ function App() {
                     <button onClick={outputMeasurements}>Show me weird measurements!</button>
                 </div>
             </form>
-            {showOutput ? <output unit={unit} category={category} number={inputNumber} /> : null}
+            {showOutput ? <Output unit={unit} category={category} number={inputNumber} /> : null}
         </div>
     )
 }
