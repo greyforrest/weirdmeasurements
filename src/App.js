@@ -1,5 +1,5 @@
 import './App.css';
-import './output';
+import Output from './Output';
 import {useState} from "react";
 import './index.css';
 

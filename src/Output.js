@@ -1,4 +1,4 @@
-import './output.css';
+import './Output.css';
 import {useState} from "react";
 import './index.css';
 
@@ -60,3 +60,5 @@ function Output(props){
         </div>
     )
 }
+
+export default Output;
