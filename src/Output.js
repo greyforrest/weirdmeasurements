@@ -21,7 +21,7 @@ function Output(props){
             case "weight":
                 return caculateForWeight();*/
             default:
-                return null;
+                return [{value : 404, label: "Error"}, {value : 404, label: "Error"} ];
         }
     }
 
